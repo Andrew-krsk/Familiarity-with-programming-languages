@@ -7,10 +7,10 @@
 int value = new Random().Next(100, 1000);
 System.Console.WriteLine(value);
 
-int DelSecondNumber (int value)
+int DelSecondNumber(int value)
 {
-    int result = value /100 * 10;
-    result = result + value %10;
+    int result = value / 100 * 10;
+    result = result + value % 10;
     return result;
 }
 
