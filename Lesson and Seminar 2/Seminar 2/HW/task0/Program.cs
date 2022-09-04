@@ -17,9 +17,9 @@ int Prompt(string message)
 }
 int value = Prompt("Введите трехзначное число > ");
 
-int SecondNumber (int second)
+int SecondNumber (int value)
 {
-    int result = second % 100;
+    int result = value % 100;
     result = result / 10;
     return result;
 }
