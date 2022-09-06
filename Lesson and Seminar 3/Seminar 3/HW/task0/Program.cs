@@ -11,9 +11,14 @@ int Prompt(string message)
 
 int value = Prompt("Введите число:");
 
-if (value/10000 == value %10 && value/1000 %10 == value %100 /10)
+if (10000 <= value && value < 100000)
 {
-    System.Console.WriteLine($" Число {value} является полиндромом");
+    if (value / 10000 == value % 10 && value / 1000 % 10 == value % 100 / 10)
+    {
+        System.Console.WriteLine($" Число {value} является полиндромом");
+    }
+    else
+        System.Console.WriteLine($" Число {value} не является полиндромом");
 }
 else
-System.Console.WriteLine($" Число {value} не является полиндромом");
+System.Console.WriteLine("Введите положительное пятизначное число");
