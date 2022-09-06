@@ -15,16 +15,14 @@ int Prompt(string message)
     }
     throw new Exception("Данное значение невозможно преобразовать в число");
 }
-int value = Prompt("Введите число > ");
 
 int MakeThreeDigitNumber (int value)
 {
     while (value > 999)
     {
-        int result = value/10;
-        return result;
+        value = value/10;
     }
-    
+    return value;
 } 
 
 int ThirdNumber(int value)
@@ -33,10 +31,14 @@ int ThirdNumber(int value)
     return result;
 }
 
+int value = Prompt("Введите число > ");
+
 if (value > 99)
 {
-    int MakeThreeDigitNumber(value);
-    int thirdNumber = ThirdNumber(value);
+    int makeThreeDigit =  MakeThreeDigitNumber(value);
+    System.Console.WriteLine(makeThreeDigit);
+
+    int thirdNumber = ThirdNumber(makeThreeDigit);
     System.Console.WriteLine($"Третья цифра заданного числа -> {thirdNumber}");
 }
 else
