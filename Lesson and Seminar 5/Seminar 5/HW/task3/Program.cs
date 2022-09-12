@@ -41,8 +41,8 @@ double FindMin(double[] array)
     return min;
 }
 
-double[] array = GenerateArray(5, 0, 100);
+double[] array = GenerateArray(5, 0, 10);
 PrintArray(array);
 
-System.Console.WriteLine($"Разница между максимальным и минимальным значением массива равна {FindMax(array) - FindMin(array)}");
+System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива равна {FindMax(array) - FindMin(array)}");
 

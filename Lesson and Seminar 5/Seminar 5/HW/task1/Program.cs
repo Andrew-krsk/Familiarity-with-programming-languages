@@ -37,4 +37,4 @@ int Count(int[] array)
 
 int[] array = GenerateArray(4, 100, 999);
 PrintArray(array);
-System.Console.WriteLine(Count(array));
+System.Console.WriteLine($"Количество четных чисел в массиве = {Count(array)}");

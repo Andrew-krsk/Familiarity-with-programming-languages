@@ -20,7 +20,7 @@ void PrintArray(int[] array)
     {
         System.Console.Write(array[i] + ", ");
     }
-    System.Console.WriteLine();
+    System.Console.Write("-> ");
 }
 
 int Count(int[] array)
@@ -35,4 +35,4 @@ int Count(int[] array)
 
 int[] array = GenerateArray(5, -9, 9);
 PrintArray(array);
-System.Console.WriteLine(Count(array));
+System.Console.WriteLine($"Cумма элементов, стоящих на нечетных пзициях = {Count(array)}");
