@@ -20,5 +20,4 @@ void DisplayArray(int[] array)
     }
     System.Console.WriteLine();
 }
-// int [] array = Create(8);
 DisplayArray(Create(8));
