@@ -1,15 +1,6 @@
 ﻿//Напишите программу замены элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 //[-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-int Prompt(string message)
-{
-    Console.Write(message);
-    bool isDigit = int.TryParse(Console.ReadLine(), out int number);
-    if (isDigit){
-        return number;
-    }
-    throw new Exception("Вы ввели не число");
-}
 int[] GenerateArray(int length, int minRandom, int maxRandom)
 {
     Random rnd = new Random();

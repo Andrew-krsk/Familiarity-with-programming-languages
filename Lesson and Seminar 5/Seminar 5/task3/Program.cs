@@ -12,7 +12,14 @@ int Prompt(string message)
     }
     throw new Exception("Вы ввели не число");
 }
-
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write(array[i]+ "\t");
+    }
+    System.Console.WriteLine();
+}
 int[] GenerateArray(int length, int minRandom, int maxRandom)
 {
     Random rnd = new Random();
@@ -21,6 +28,7 @@ int[] GenerateArray(int length, int minRandom, int maxRandom)
     {
         answer[i] = rnd.Next(minRandom, maxRandom + 1);
     }
+    return answer;
 }
 
 bool SearchResult(int[] array, int searchNum)
@@ -41,7 +49,6 @@ const int MAX_ELEMENTS = 99;
 int ArrayLen = Prompt("Введите длину массива > ");
 int[] array = GenerateArray(ArrayLen, MIN_ELEMENTS, MAX_ELEMENTS);
 PrintArray(array);
-
 int searchNum = Prompt("Введите искомое число > ");
 
 if (SearchResult(array, searchNum))

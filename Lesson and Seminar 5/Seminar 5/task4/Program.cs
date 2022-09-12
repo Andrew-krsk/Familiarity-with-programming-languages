@@ -4,16 +4,6 @@
 // [1, 2, 3, 6, 2] -> 0
 // [10, 11, 12, 13, 14] -> 5
 
-int Prompt(string message)
-{
-    Console.Write(message);
-    bool isDigit = int.TryParse(Console.ReadLine(), out int number);
-    if (isDigit)
-    {
-        return number;
-    }
-    throw new Exception("Вы ввели не число");
-}
 
 int[] GenerateArray(int length, int minRandom, int maxRandom)
 {

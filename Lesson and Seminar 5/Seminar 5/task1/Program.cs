@@ -46,7 +46,6 @@ int SumElements(int[] array, int sign = POSITIVE_VALUE)
             sum += array[i];
         }
     }
-
     return sum;
 }
 
@@ -56,5 +55,5 @@ const int MAX_ELEMENTS = 9;
 int length = Prompt("Введите длину массива >");
 int[] array = GenerateArray(length, MIN_ELEMENTS, MAX_ELEMENTS);
 PrintArray(array);
-System.Console.WriteLine($"Сумма положительных значений равна {SumElements(array)}");
+System.Console.WriteLine($"Сумма положительных значений равна {SumElements(array, POSITIVE_VALUE)}");
 System.Console.WriteLine($"Сумма отрицательных значений равна {SumElements(array, NEGATIVE_VALUE)}");
