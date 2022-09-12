@@ -33,6 +33,6 @@ int Count(int[] array)
     return count;
 }
 
-int[] array = GenerateArray(5, 0, 9);
+int[] array = GenerateArray(5, -9, 9);
 PrintArray(array);
 System.Console.WriteLine(Count(array));
