@@ -9,7 +9,7 @@ int[] GenerateArray(int length, int minRandom, int maxRandom)
     int[] answer = new int[length];
     for (int i = 0; i < answer.Length; i++)
     {
-        answer[i] = rnd.Next(minRandom, maxRandom + 1);
+        answer[i] = rnd.Next(minRandom, maxRandom + 1); //it's not a question to return the answer. Better use "array" or "generatedArray"
     }
     return answer;
 }
@@ -33,6 +33,6 @@ int Count(int[] array)
     return count;
 }
 
-int[] array = GenerateArray(5, -9, 9);
+int[] array = GenerateArray(5, -9, 9); //magic numbers, better to use Prompt() to input these values
 PrintArray(array);
-System.Console.WriteLine($"Cумма элементов, стоящих на нечетных пзициях = {Count(array)}");
+System.Console.WriteLine($"Cумма элементов, стоящих на нечетных пзициях = {Count(array)}"); //позициях
