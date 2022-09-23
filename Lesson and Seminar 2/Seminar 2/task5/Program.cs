@@ -31,6 +31,7 @@ for (int i = 0; i < numbers.Length; i++)
 int summ = Summ(numbers);
 double ave;
 
+
 // for (int i = 0; i < numbers.Length; i++)
 // {
 //     summ += numbers[i];
