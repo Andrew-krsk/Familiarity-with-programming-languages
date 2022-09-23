@@ -4,14 +4,6 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-
-// double[,] GenerateArray(int rowLength, int colLength, int minRange, int maxRange)
-// {
-//     double[,] array = new double[rowLength, colLength];
-//     int random = new Random();
-
-// }
-
 double[,] GenerateArray(int rowLength, int colLength, int minRange, int maxRange)
 {
     var array = new double[rowLength, colLength];
