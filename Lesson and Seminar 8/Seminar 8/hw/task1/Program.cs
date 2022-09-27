@@ -32,7 +32,15 @@ int[,] SortedArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        SortMaxToMinInRow(array, i);
+       
+    }
+    return array;
+}
+
+void SortMaxToMinInRow(int[,] array, int i)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
         {
             for (int k = j + 1; k < array.GetLength(1); k++)
             {
@@ -44,8 +52,6 @@ int[,] SortedArray(int[,] array)
                 }
             }
         }
-    }
-    return array;
 }
 
 
