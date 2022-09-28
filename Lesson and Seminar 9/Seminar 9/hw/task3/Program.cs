@@ -16,9 +16,10 @@ int Prompt(string messege)
 
 int FunctionAckerman(int m, int n)
 {
+    int result = n + 1;
     if (m == 0)
     {
-        return n + 1;
+        return result;
     }
     else if ((m > 0) && (n == 0))
     {
@@ -29,9 +30,10 @@ int FunctionAckerman(int m, int n)
         return FunctionAckerman(m - 1, FunctionAckerman(m, n - 1));
     }
     else
-        return n + 1;
+        return result;
 }
 
-int m = Prompt("Введите значение M -> ");
-int n = Prompt("Введите значение N -> ");
-System.Console.WriteLine(FunctionAckerman(m, n));
+int m = Prompt("Введите значение m -> ");
+int n = Prompt("Введите значение n -> ");
+System.Console.WriteLine($"A({m},{n}) = {FunctionAckerman(m, n)}");
+
