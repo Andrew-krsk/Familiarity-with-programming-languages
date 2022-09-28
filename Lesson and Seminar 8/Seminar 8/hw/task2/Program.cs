@@ -15,7 +15,7 @@ int[,] GenerateArray(int rowLength, int colLength, int minRange, int maxRange)
     return array;
 }
 
-void PrintArrayMatrix(int[,] array)
+void PrintMatrix(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -50,26 +50,23 @@ int[] SumOfRow(int[,] array)
     return sum;
 }
 
-int MinSumOfRow(int[] sum)
+void MinSumOfRow(int[] sum)
 {
-    int min = sum[0];
     int indexMin = 0;
     for (int i = 1; i < sum.Length; i++)
     {
-        if (sum[i] < min)
+        if (sum[i] < sum[indexMin])
         {
-            min = sum[i];
             indexMin = i;
         }
     }
-    System.Console.WriteLine($"Строка с наименьшей суммой элементов {min} - строка № {indexMin + 1}");
+    System.Console.WriteLine($"Строка с наименьшей суммой элементов {sum[indexMin]} - строка № {indexMin + 1}");
     System.Console.WriteLine();
-    return min;
 }
 
 int[,] array = GenerateArray(3, 4, 0, 10);
-PrintArrayMatrix(array);
+PrintMatrix(array);
 int[] sum = SumOfRow(array);
 PrintArray(sum);
-int min = MinSumOfRow(sum);
+MinSumOfRow(sum);
 
