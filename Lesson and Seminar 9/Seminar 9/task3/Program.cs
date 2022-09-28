@@ -21,4 +21,4 @@ int SumOfDigit(int number)
 }
 
 int num = Prompt("Введи число: ");
-System.Console.WriteLine($"{SumOfDigit(num)}");
+System.Console.WriteLine($"{SumOfDigit(num)}"); 
